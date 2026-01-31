@@ -159,7 +159,7 @@
         async function processTranscript(transcript) {
             updateUI("processing", "🤔 Processing your message...");
 
-            const API_KEY = "AIzaSyDvIKP0qJn-ru5fvv_uiu2RmYy10D8qKSg";
+            const API_KEY = process.env.GEMINI_API_KEY
             const API_URL = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${API_KEY}`;
 
             const requestBody = {
